@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+plt.style.use('ggplot')
 import seaborn as sns
 from pandas import DataFrame
 
@@ -53,4 +54,4 @@ df = DataFrame()
 df["dates"] = ["2022-11-01", "2022-11-02", "2022-11-03", "2022-11-04", "2022-11-05", "2022-11-06", "2022-11-07"]
 df["purchases"] = [100, 150, 200, 250, None, 200, 220]
 title = "What a Title!"
-plotx(df, 'dates', 'purchases', rotation='90', title=title)
+plotx(df, 'dates', 'purchases', rotation='45', title=title)
