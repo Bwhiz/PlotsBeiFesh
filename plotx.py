@@ -38,13 +38,8 @@ def plotx(df, x, y, xlabel=None, ylabel=None, title=None, xticks_range=False, va
             plt.ylabel(ylabel)
         if title:
             plt.title(title)
-
-        for bar in plots.patches:
-            plots.annotate(format(bar.get_height(), decimals),
-                       (bar.get_x() + bar.get_width() / 2,
-                        bar.get_height()), ha='center', va='center',
-                       size=10, xytext=(0, 8),
-                       textcoords='offset points')
+        for c in plots.containers:
+            plots.bar_label(c)
         plt.show()
     except Exception as e:
         print(f"Error while making your plot...:\n{e}")
